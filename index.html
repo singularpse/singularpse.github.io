@@ -141,96 +141,6 @@
       <div class="body-wrap">
         
   
-    <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2016/10/16/test/">test</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Test</p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="2016/10/16/test/" class="archive-article-date">
-  	<time datetime="2016-10-16T09:23:30.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-16</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-测试" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2016/10/16/测试/">测试</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>测试用</p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="2016/10/16/测试/" class="archive-article-date">
-  	<time datetime="2016-10-16T08:32:50.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-16</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
     <article id="post-精灵宝可梦历代种族值分布" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -241,7 +151,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="2016/10/15/精灵宝可梦历代种族值分布/">精灵宝可梦历代种族值分布</a>
+      <a class="article-title" href="2016/10/21/精灵宝可梦历代种族值分布/">精灵宝可梦历代种族值分布</a>
     </h1>
   
 
@@ -252,7 +162,7 @@
         <p>昨晚看到新公布的<a href="http://www.nintendo.com.hk/pressrelease/3ds_20161014_sun_moon_release.htm" target="_blank" rel="external">600准神<strong>杖尾鱗甲龍</strong>以及<strong>低配版的老创銀伴戰獸</strong></a>，总体感觉低配老创还是挺有范儿的，种族值估计不会超600，搞不好直接打个八折，720*0.8=576也还挺有趣。</p>
 <p>既然提到种族值了，就突然对历代新Pokemon的种族值分布有了点兴趣，Wiki虽然有种族值列表，但一图胜千言，正好最近看到一个很漂亮的ggplot2主题，打开RStudio动手：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">ggplot(data.species.strengths, aes(Species.strengths)) + </div><div class="line">  geom_density(color = <span class="string">"black"</span>, aes(fill = Gen)) +</div><div class="line">  geom_vline(xintercept = <span class="number">530</span>, color = <span class="string">"gray60"</span>, linetype = <span class="number">2</span>) +</div><div class="line">  facet_grid(~Gen) +</div><div class="line">  scale_fill_colorblind() +</div><div class="line">  <span class="comment">#theme(text=element_text(family="STKaiti",size=14)) +</span></div><div class="line">  theme_bw() +</div><div class="line">  labs(title=<span class="string">"Pokemon Species Strengths by Generation"</span>,</div><div class="line">       x = <span class="string">"Species Strengths"</span>,</div><div class="line">       y = <span class="string">"Density"</span>) +</div><div class="line">  theme(</div><div class="line">    strip.background = element_rect(colour = <span class="string">"white"</span>, fill = <span class="string">"white"</span>),</div><div class="line">    strip.text.x = element_text(colour = <span class="string">"black"</span>, size = <span class="number">10</span>, face = <span class="string">"bold"</span>, </div><div class="line">                                family = <span class="string">"Trebuchet MS"</span>),</div><div class="line">    panel.margin = unit(<span class="number">0</span>, <span class="string">"lines"</span>),</div><div class="line">    panel.border = element_rect(colour = <span class="string">"gray90"</span>),</div><div class="line">    axis.text.x = element_text(size = <span class="number">8</span>, family = <span class="string">"Trebuchet MS"</span>),</div><div class="line">    axis.text.y = element_text(size = <span class="number">8</span>, family = <span class="string">"Trebuchet MS"</span>),</div><div class="line">    axis.title = element_text(size = <span class="number">10</span>, family = <span class="string">"Trebuchet MS"</span>),</div><div class="line">    plot.title=element_text(family=<span class="string">"TrebuchetMS-Bold"</span>),</div><div class="line">    legend.position = <span class="string">"none"</span>,</div><div class="line">    panel.grid.major = element_blank(), </div><div class="line">    panel.grid.minor = element_blank()</div><div class="line">  )</div></pre></td></tr></table></figure>
-
+<p><img src="http://www.yangpeng.me/Image/Species_strengths_noMega.png" alt="image"></p>
 <ul>
 <li>虚线标注的是御三家平均种族值530</li>
 <li>种族值密度曲线可以看出Pokemon时代的发展演化</li>
@@ -265,19 +175,19 @@
 <li>马上还有一个多月就要发售的日月，不知又会是什么样的分布，敬请期待吧。</li>
 </ul>
 <p>最后，附加一份详细的种族值总和及HP，攻击，防御，特攻，特防，速度的历代分布对比图。</p>
-
+<p><img src="http://www.yangpeng.me/Image/Species_strengths.png" alt="image"></p>
 
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="2016/10/15/精灵宝可梦历代种族值分布/" class="archive-article-date">
-  	<time datetime="2016-10-15T13:37:48.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-15</time>
+      <a href="2016/10/21/精灵宝可梦历代种族值分布/" class="archive-article-date">
+  	<time datetime="2016-10-21T06:53:42.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-21</time>
 </a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/Pokemon/">Pokemon</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/R/">R</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/宝可梦/">宝可梦</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/Pokemon/">Pokemon</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/R/">R</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/精灵宝可梦/">精灵宝可梦</a></li></ul>
 	</div>
 
       
@@ -535,7 +445,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="tags/OCG/" style="font-size: 10px;">OCG</a> <a href="tags/Pokemon/" style="font-size: 10px;">Pokemon</a> <a href="tags/R/" style="font-size: 10px;">R</a> <a href="tags/Zelda/" style="font-size: 10px;">Zelda</a> <a href="tags/宝可梦/" style="font-size: 10px;">宝可梦</a>
+    				<a href="tags/OCG/" style="font-size: 10px;">OCG</a> <a href="tags/Pokemon/" style="font-size: 10px;">Pokemon</a> <a href="tags/R/" style="font-size: 10px;">R</a> <a href="tags/Zelda/" style="font-size: 10px;">Zelda</a> <a href="tags/精灵宝可梦/" style="font-size: 10px;">精灵宝可梦</a>
     			</div>
     	</section>
     
