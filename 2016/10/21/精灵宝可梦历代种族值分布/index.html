@@ -85,23 +85,20 @@
 
 
 <meta name="description" content="昨晚看到新公布的600准神杖尾鱗甲龍以及低配版的老创銀伴戰獸，总体感觉低配老创还是挺有范儿的，种族值估计不会超600，搞不好直接打个八折，720*0.8=576也还挺有趣。
-既然提到种族值了，就突然对历代新Pokemon的种族值分布有了点兴趣，Wiki虽然有种族值列表，但一图胜千言，正好最近看到一个很漂亮的ggplot2主题，打开RStudio动手：
-12345678910111213141516">
+既然提到种族值了，就突然对历代新Pokemon的种族值分布有了点兴趣，Wiki虽然有种族值列表，但一图胜千言，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="精灵宝可梦历代种族值分布">
 <meta property="og:url" content="http://singularpse.github.io/2016/10/21/精灵宝可梦历代种族值分布/index.html">
 <meta property="og:site_name" content="灰碑">
 <meta property="og:description" content="昨晚看到新公布的600准神杖尾鱗甲龍以及低配版的老创銀伴戰獸，总体感觉低配老创还是挺有范儿的，种族值估计不会超600，搞不好直接打个八折，720*0.8=576也还挺有趣。
-既然提到种族值了，就突然对历代新Pokemon的种族值分布有了点兴趣，Wiki虽然有种族值列表，但一图胜千言，正好最近看到一个很漂亮的ggplot2主题，打开RStudio动手：
-12345678910111213141516">
+既然提到种族值了，就突然对历代新Pokemon的种族值分布有了点兴趣，Wiki虽然有种族值列表，但一图胜千言，">
 <meta property="og:image" content="http://www.yangpeng.me/Image/Species_strengths_noMega.png">
 <meta property="og:image" content="http://www.yangpeng.me/Image/Species_strengths.png">
-<meta property="og:updated_time" content="2016-12-31T11:38:55.000Z">
+<meta property="og:updated_time" content="2016-12-31T12:38:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="精灵宝可梦历代种族值分布">
 <meta name="twitter:description" content="昨晚看到新公布的600准神杖尾鱗甲龍以及低配版的老创銀伴戰獸，总体感觉低配老创还是挺有范儿的，种族值估计不会超600，搞不好直接打个八折，720*0.8=576也还挺有趣。
-既然提到种族值了，就突然对历代新Pokemon的种族值分布有了点兴趣，Wiki虽然有种族值列表，但一图胜千言，正好最近看到一个很漂亮的ggplot2主题，打开RStudio动手：
-12345678910111213141516">
+既然提到种族值了，就突然对历代新Pokemon的种族值分布有了点兴趣，Wiki虽然有种族值列表，但一图胜千言，">
 <meta name="twitter:image" content="http://www.yangpeng.me/Image/Species_strengths_noMega.png">
 
 
@@ -201,22 +198,22 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-tags">
           <a href="" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -325,7 +322,7 @@
 
       
         <p>昨晚看到新公布的<a href="http://www.nintendo.com.hk/pressrelease/3ds_20161014_sun_moon_release.htm" target="_blank" rel="external">600准神<strong>杖尾鱗甲龍</strong>以及<strong>低配版的老创銀伴戰獸</strong></a>，总体感觉低配老创还是挺有范儿的，种族值估计不会超600，搞不好直接打个八折，720*0.8=576也还挺有趣。</p>
-<p>既然提到种族值了，就突然对历代新Pokemon的种族值分布有了点兴趣，Wiki虽然有种族值列表，但一图胜千言，正好最近看到一个很漂亮的ggplot2主题，打开RStudio动手：</p>
+<p>既然提到种族值了，就突然对历代新Pokemon的种族值分布有了点兴趣，Wiki虽然有种族值列表，但一图胜千言，<a id="more"></a>正好最近看到一个很漂亮的ggplot2主题，打开RStudio动手：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">ggplot(data.species.strengths, aes(Species.strengths)) + </div><div class="line">  geom_density(color = <span class="string">"black"</span>, aes(fill = Gen)) +</div><div class="line">  geom_vline(xintercept = <span class="number">530</span>, color = <span class="string">"gray60"</span>, linetype = <span class="number">2</span>) +</div><div class="line">  facet_grid(~Gen) +</div><div class="line">  scale_fill_colorblind() +</div><div class="line">  <span class="comment">#theme(text=element_text(family="STKaiti",size=14)) +</span></div><div class="line">  theme_bw() +</div><div class="line">  labs(title=<span class="string">"Pokemon Species Strengths by Generation"</span>,</div><div class="line">       x = <span class="string">"Species Strengths"</span>,</div><div class="line">       y = <span class="string">"Density"</span>) +</div><div class="line">  theme(</div><div class="line">    strip.background = element_rect(colour = <span class="string">"white"</span>, fill = <span class="string">"white"</span>),</div><div class="line">    strip.text.x = element_text(colour = <span class="string">"black"</span>, size = <span class="number">10</span>, face = <span class="string">"bold"</span>, </div><div class="line">                                family = <span class="string">"Trebuchet MS"</span>),</div><div class="line">    panel.margin = unit(<span class="number">0</span>, <span class="string">"lines"</span>),</div><div class="line">    panel.border = element_rect(colour = <span class="string">"gray90"</span>),</div><div class="line">    axis.text.x = element_text(size = <span class="number">8</span>, family = <span class="string">"Trebuchet MS"</span>),</div><div class="line">    axis.text.y = element_text(size = <span class="number">8</span>, family = <span class="string">"Trebuchet MS"</span>),</div><div class="line">    axis.title = element_text(size = <span class="number">10</span>, family = <span class="string">"Trebuchet MS"</span>),</div><div class="line">    plot.title=element_text(family=<span class="string">"TrebuchetMS-Bold"</span>),</div><div class="line">    legend.position = <span class="string">"none"</span>,</div><div class="line">    panel.grid.major = element_blank(), </div><div class="line">    panel.grid.minor = element_blank()</div><div class="line">  )</div></pre></td></tr></table></figure>
 <p><img src="http://www.yangpeng.me/Image/Species_strengths_noMega.png" alt="image"></p>
 <ul>
