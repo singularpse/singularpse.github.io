@@ -1,20 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
   
 
 
-<html class="theme-next pisces use-motion" lang="en">
+<html class="theme-next muse use-motion" lang="en">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
 
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
 
 
 
@@ -34,38 +45,27 @@
 
 
 
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
 
 
 
 <link href="lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+<link href="css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -73,11 +73,6 @@
 
 
 
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
 
 
 
@@ -100,10 +95,12 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"right","display":"post"},
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: 'Author'
@@ -126,54 +123,53 @@
 
 
 
-  <title> Milestone </title>
+  <title>Milestone</title>
+  
+
+
+
+
+
+
+
+
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
   
-
-
-
-
-
-
-
-
-
-
-  
   
     
   
 
-  <div class="container one-collumn sidebar-position-right 
-   page-home 
- ">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Milestone</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Milestone</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Low dimensional projection of brain.</p>
+      
   </div>
-    
-      <p class="site-subtitle">Low dimensional projection of brain.</p>
-    
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -193,42 +189,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-categories">
-          <a href="" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            Categories
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
           <a href="" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             Archives
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            About
           </a>
         </li>
       
@@ -260,21 +226,22 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://singularpse.github.io2018/08/23/Zebrafish-behavior-pattern-recognition-using-three-dimensional-tracking-and-machine-learning/">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://singularpse.github.io2018/08/23/Zebrafish-behavior-pattern-recognition-using-three-dimensional-tracking-and-machine-learning/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Yang Peng">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/Image/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Milestone">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Milestone" src="">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yang Peng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Image/avatar.png">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Milestone">
+    </span>
 
     
       <header class="post-header">
@@ -282,16 +249,8 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="2018/08/23/Zebrafish-behavior-pattern-recognition-using-three-dimensional-tracking-and-machine-learning/" itemprop="url">
-                  Zebrafish behavior pattern recognition using three-dimensional tracking and machine learning
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="2018/08/23/Zebrafish-behavior-pattern-recognition-using-three-dimensional-tracking-and-machine-learning/" itemprop="url">Zebrafish behavior pattern recognition using three-dimensional tracking and machine learning</a></h1>
         
 
         <div class="post-meta">
@@ -320,8 +279,8 @@
           
 
           
-
           
+
           
 
           
@@ -332,7 +291,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -352,17 +313,19 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -372,6 +335,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -384,21 +351,22 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://singularpse.github.io2017/02/02/AirPods入手/">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://singularpse.github.io2017/02/02/AirPods入手/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Yang Peng">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/Image/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Milestone">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Milestone" src="">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yang Peng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Image/avatar.png">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Milestone">
+    </span>
 
     
       <header class="post-header">
@@ -406,16 +374,8 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="2017/02/02/AirPods入手/" itemprop="url">
-                  AirPods入手
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="2017/02/02/AirPods入手/" itemprop="url">AirPods入手</a></h1>
         
 
         <div class="post-meta">
@@ -444,8 +404,8 @@
           
 
           
-
           
+
           
 
           
@@ -456,7 +416,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -489,17 +451,19 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -509,6 +473,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -521,21 +489,22 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://singularpse.github.io2017/01/26/失控-读书笔记/">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://singularpse.github.io2017/01/26/失控-读书笔记/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Yang Peng">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/Image/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Milestone">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Milestone" src="">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yang Peng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Image/avatar.png">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Milestone">
+    </span>
 
     
       <header class="post-header">
@@ -543,16 +512,8 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="2017/01/26/失控-读书笔记/" itemprop="url">
-                  失控-读书笔记
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="2017/01/26/失控-读书笔记/" itemprop="url">失控-读书笔记</a></h1>
         
 
         <div class="post-meta">
@@ -581,8 +542,8 @@
           
 
           
-
           
+
           
 
           
@@ -593,7 +554,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -614,7 +577,7 @@
 <li>蛇是线性的，但当它回身咬住自己的时候，它就变成了非线性物体的原型。在经典的荣格主义框架中，咬住尾巴的衔尾蛇是对自我的一种象征性的图解。圆圈的完整性就是自我的自我控制，这种控制既来源于一个事物，也来源于相互竞争的部件。从这个意义上说，作为反馈回路的最为平实的体现，抽水马桶也同样是一只神秘的野兽——自我之兽。</li>
 </ul>
           <!--noindex-->
-          <div class="post-more-link text-center">
+          <div class="post-button text-center">
             <a class="btn" href="2017/01/26/失控-读书笔记/#more" rel="contents">
               Read more &raquo;
             </a>
@@ -623,17 +586,19 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -643,6 +608,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -655,21 +624,22 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://singularpse.github.io2017/01/26/枪炮、病菌与钢铁-人类社会的命运-读书笔记/">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://singularpse.github.io2017/01/26/枪炮、病菌与钢铁-人类社会的命运-读书笔记/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Yang Peng">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/Image/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Milestone">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Milestone" src="">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yang Peng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Image/avatar.png">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Milestone">
+    </span>
 
     
       <header class="post-header">
@@ -677,16 +647,8 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="2017/01/26/枪炮、病菌与钢铁-人类社会的命运-读书笔记/" itemprop="url">
-                  枪炮、病菌与钢铁 人类社会的命运 读书笔记
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="2017/01/26/枪炮、病菌与钢铁-人类社会的命运-读书笔记/" itemprop="url">枪炮、病菌与钢铁 人类社会的命运 读书笔记</a></h1>
         
 
         <div class="post-meta">
@@ -715,8 +677,8 @@
           
 
           
-
           
+
           
 
           
@@ -727,7 +689,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -747,7 +711,7 @@
 <p>另外指出一点不当之处，关于日语汉字不被全假名取代，作者认为是汉字的高声望所故，可能是作者没有学习过日语，只是从通用语言学知识的角度提出这个观点；学过日语或许就会发现，日语汉字更多是消歧义和分位标识作用，这一点对于这个语言系统的高效运转而言不可或缺。</p>
 <p>总之该书有很多值得大家一读的精彩论断，虽然关于地理和历史的追述或许有些枯燥，特别是类似我这种地理和历史不感冒的读者，但从这些进程中得出的生物学观点可是非常有意思的。</p>
           <!--noindex-->
-          <div class="post-more-link text-center">
+          <div class="post-button text-center">
             <a class="btn" href="2017/01/26/枪炮、病菌与钢铁-人类社会的命运-读书笔记/#more" rel="contents">
               Read more &raquo;
             </a>
@@ -756,17 +720,19 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -776,6 +742,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -788,21 +758,22 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://singularpse.github.io2017/01/14/「目を覚まして」message-tone/">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://singularpse.github.io2017/01/14/「目を覚まして」message-tone/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Yang Peng">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/Image/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Milestone">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Milestone" src="">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yang Peng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Image/avatar.png">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Milestone">
+    </span>
 
     
       <header class="post-header">
@@ -810,16 +781,8 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="2017/01/14/「目を覚まして」message-tone/" itemprop="url">
-                  「目を覚まして」message tone
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="2017/01/14/「目を覚まして」message-tone/" itemprop="url">「目を覚まして」message tone</a></h1>
         
 
         <div class="post-meta">
@@ -848,8 +811,8 @@
           
 
           
-
           
+
           
 
           
@@ -860,7 +823,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -882,17 +847,19 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -902,6 +869,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -914,21 +885,22 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://singularpse.github.io2016/12/31/Macbook-Pro-2016-入手/">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://singularpse.github.io2016/12/31/Macbook-Pro-2016-入手/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Yang Peng">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/Image/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Milestone">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Milestone" src="">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yang Peng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Image/avatar.png">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Milestone">
+    </span>
 
     
       <header class="post-header">
@@ -936,16 +908,8 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="2016/12/31/Macbook-Pro-2016-入手/" itemprop="url">
-                  Macbook Pro 2016 入手
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="2016/12/31/Macbook-Pro-2016-入手/" itemprop="url">Macbook Pro 2016 入手</a></h1>
         
 
         <div class="post-meta">
@@ -974,8 +938,8 @@
           
 
           
-
           
+
           
 
           
@@ -986,7 +950,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -996,7 +962,7 @@
         
           <h3 id="Context"><a href="#Context" class="headerlink" title="Context"></a>Context</h3><p>现在实验室还是家里都是连接24寸显示器的，但每天背2012款MBP回家还是觉得好重，尽管2012款光驱位放在旧硬盘，原硬盘位装上SSD，加装8G内存，平常使用速度也没什么抱怨的。键盘是HHKB Pro 2，触控板是Magic TrackPad 2，所以平常笔记本都是合盖连接显示器。音频方面，在家是蓝牙连接Bose Soundlink mini 或者 beyerdynamic DT990 Pro 耳机；实验室则是IE80听音乐，Bose QC20降噪专注。<br><img src="https://lh3.googleusercontent.com/-pnXi592aJXI/WIn3ass690I/AAAAAAABNRo/BucFCLRa8uY/I/P1010126.jpg" alt="P1010126"></p>
           <!--noindex-->
-          <div class="post-more-link text-center">
+          <div class="post-button text-center">
             <a class="btn" href="2016/12/31/Macbook-Pro-2016-入手/#more" rel="contents">
               Read more &raquo;
             </a>
@@ -1005,17 +971,19 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -1025,6 +993,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1037,21 +1009,22 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://singularpse.github.io2016/11/18/精灵宝可梦日月皮卡丘限定new3dsLL开箱/">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://singularpse.github.io2016/11/18/精灵宝可梦日月皮卡丘限定new3dsLL开箱/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Yang Peng">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/Image/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Milestone">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Milestone" src="">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yang Peng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Image/avatar.png">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Milestone">
+    </span>
 
     
       <header class="post-header">
@@ -1059,16 +1032,8 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="2016/11/18/精灵宝可梦日月皮卡丘限定new3dsLL开箱/" itemprop="url">
-                  精灵宝可梦日月皮卡丘限定new3dsLL开箱
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="2016/11/18/精灵宝可梦日月皮卡丘限定new3dsLL开箱/" itemprop="url">精灵宝可梦日月皮卡丘限定new3dsLL开箱</a></h1>
         
 
         <div class="post-meta">
@@ -1097,8 +1062,8 @@
           
 
           
-
           
+
           
 
           
@@ -1109,7 +1074,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1120,7 +1087,7 @@
           <p><img src="http://www.yangpeng.me/Image/3dsll_pikachu4.JPG" alt="image"></p>
 <h4 id="纪念"><a href="#纪念" class="headerlink" title="纪念"></a>纪念</h4><p>精灵宝可梦（Pokemon）日月终于发售了，简体中文语言的加入让作为无数PM饭激动不已，虽然马上明年3月Nintendo Switch就要发售，家用机掌机合体的定位虽然老任说NS不是3DS的继任，但不可避免地加速3DS的老化，这个时点还入3DS不如等几个月入Nintendo Switch更划算，纠结了一阵后，还是觉得该入台皮神限定机作为3DS时代的纪念吧！<br>
           <!--noindex-->
-          <div class="post-more-link text-center">
+          <div class="post-button text-center">
             <a class="btn" href="2016/11/18/精灵宝可梦日月皮卡丘限定new3dsLL开箱/#more" rel="contents">
               Read more &raquo;
             </a>
@@ -1129,17 +1096,19 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -1149,6 +1118,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1161,21 +1134,22 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://singularpse.github.io2016/10/27/Surface-Studio-s-owl-wallpaper/">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://singularpse.github.io2016/10/27/Surface-Studio-s-owl-wallpaper/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Yang Peng">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/Image/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Milestone">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Milestone" src="">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yang Peng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Image/avatar.png">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Milestone">
+    </span>
 
     
       <header class="post-header">
@@ -1183,16 +1157,8 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="2016/10/27/Surface-Studio-s-owl-wallpaper/" itemprop="url">
-                  Surface Studio's owl wallpaper
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="2016/10/27/Surface-Studio-s-owl-wallpaper/" itemprop="url">Surface Studio's owl wallpaper</a></h1>
         
 
         <div class="post-meta">
@@ -1221,8 +1187,8 @@
           
 
           
-
           
+
           
 
           
@@ -1233,7 +1199,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1250,17 +1218,19 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -1270,6 +1240,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1282,21 +1256,22 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://singularpse.github.io2016/10/21/精灵宝可梦历代种族值分布/">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://singularpse.github.io2016/10/21/精灵宝可梦历代种族值分布/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Yang Peng">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/Image/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Milestone">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Milestone" src="">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yang Peng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Image/avatar.png">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Milestone">
+    </span>
 
     
       <header class="post-header">
@@ -1304,16 +1279,8 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="2016/10/21/精灵宝可梦历代种族值分布/" itemprop="url">
-                  精灵宝可梦历代种族值分布
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="2016/10/21/精灵宝可梦历代种族值分布/" itemprop="url">精灵宝可梦历代种族值分布</a></h1>
         
 
         <div class="post-meta">
@@ -1342,8 +1309,8 @@
           
 
           
-
           
+
           
 
           
@@ -1354,7 +1321,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1367,7 +1336,7 @@
 <figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">ggplot(<span class="name">data</span>.species.strengths, aes(<span class="name">Species</span>.strengths)) + </div><div class="line">  geom_density(<span class="name">color</span> = <span class="string">"black"</span>, aes(<span class="name">fill</span> = Gen)) +</div><div class="line">  geom_vline(<span class="name">xintercept</span> = <span class="number">530</span>, color = <span class="string">"gray60"</span>, linetype = <span class="number">2</span>) +</div><div class="line">  facet_grid(~Gen) +</div><div class="line">  scale_fill_colorblind() +</div><div class="line">  #theme(<span class="name">text=element_text</span>(<span class="name">family=</span><span class="string">"STKaiti"</span>,size=14)) +</div><div class="line">  theme_bw() +</div><div class="line">  labs(<span class="name">title=</span><span class="string">"Pokemon Species Strengths by Generation"</span>,</div><div class="line">       x = <span class="string">"Species Strengths"</span>,</div><div class="line">       y = <span class="string">"Density"</span>) +</div><div class="line">  theme(</div><div class="line">    <span class="name">strip</span>.background = element_rect(<span class="name">colour</span> = <span class="string">"white"</span>, fill = <span class="string">"white"</span>),</div><div class="line">    strip.text.x = element_text(<span class="name">colour</span> = <span class="string">"black"</span>, size = <span class="number">10</span>, face = <span class="string">"bold"</span>, </div><div class="line">                                family = <span class="string">"Trebuchet MS"</span>),</div><div class="line">    panel.margin = unit(<span class="number">0</span>, <span class="string">"lines"</span>),</div><div class="line">    panel.border = element_rect(<span class="name">colour</span> = <span class="string">"gray90"</span>),</div><div class="line">    axis.text.x = element_text(<span class="name">size</span> = <span class="number">8</span>, family = <span class="string">"Trebuchet MS"</span>),</div><div class="line">    axis.text.y = element_text(<span class="name">size</span> = <span class="number">8</span>, family = <span class="string">"Trebuchet MS"</span>),</div><div class="line">    axis.title = element_text(<span class="name">size</span> = <span class="number">10</span>, family = <span class="string">"Trebuchet MS"</span>),</div><div class="line">    plot.title=element_text(<span class="name">family=</span><span class="string">"TrebuchetMS-Bold"</span>),</div><div class="line">    legend.position = <span class="string">"none"</span>,</div><div class="line">    panel.grid.major = element_blank(), </div><div class="line">    panel.grid.minor = element_blank()</div><div class="line">  )</div></pre></td></tr></table></figure>
 <p><img src="http://www.yangpeng.me/Image/Species_strengths_noMega.png" alt="image"></p>
           <!--noindex-->
-          <div class="post-more-link text-center">
+          <div class="post-button text-center">
             <a class="btn" href="2016/10/21/精灵宝可梦历代种族值分布/#more" rel="contents">
               Read more &raquo;
             </a>
@@ -1376,17 +1345,19 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -1396,6 +1367,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1408,21 +1383,22 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://singularpse.github.io2016/10/11/游戏王OCG历史上的主流卡组/">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://singularpse.github.io2016/10/11/游戏王OCG历史上的主流卡组/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Yang Peng">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/Image/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Milestone">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Milestone" src="">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yang Peng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Image/avatar.png">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Milestone">
+    </span>
 
     
       <header class="post-header">
@@ -1430,16 +1406,8 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="2016/10/11/游戏王OCG历史上的主流卡组/" itemprop="url">
-                  游戏王OCG历史上的主流卡组
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="2016/10/11/游戏王OCG历史上的主流卡组/" itemprop="url">游戏王OCG历史上的主流卡组</a></h1>
         
 
         <div class="post-meta">
@@ -1468,8 +1436,8 @@
           
 
           
-
           
+
           
 
           
@@ -1480,7 +1448,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1491,7 +1461,7 @@
           <p>本文翻译自yugioh-wiki，文中涉及关键词将以<em>斜体</em>标明，OCG卡名将会以<strong>加粗</strong>标明，卡名取用广泛流通的中文翻译，不熟悉的卡片可以方便地进行搜索其详情。</p>
 <p>本项目纯属个人兴趣，不定期更新，请理解。</p>
           <!--noindex-->
-          <div class="post-more-link text-center">
+          <div class="post-button text-center">
             <a class="btn" href="2016/10/11/游戏王OCG历史上的主流卡组/#more" rel="contents">
               Read more &raquo;
             </a>
@@ -1500,17 +1470,19 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -1520,6 +1492,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1552,116 +1528,69 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/Image/avatar.png"
-               alt="Yang Peng" />
-          <p class="site-author-name" itemprop="name">Yang Peng</p>
-          <p class="site-description motion-element" itemprop="description">Low dimensional projection of brain.</p>
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/Image/avatar.png"
+                alt="Yang Peng" />
+            
+              <p class="site-author-name" itemprop="name">Yang Peng</p>
+              <p class="site-description motion-element" itemprop="description">Low dimensional projection of brain.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="tags/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
         </div>
-        <nav class="site-state motion-element">
-        
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">11</span>
-                <span class="site-state-item-name">posts</span>
-              </a>
-            </div>
-          
-
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">17</span>
-                <span class="site-state-item-name">tags</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://plus.google.com/u/0/+SingularpseXavier" target="_blank" title="Google">
-                  
-                    <i class="fa fa-fw fa-google-plus-square"></i>
-                  
-                  Google
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.douban.com/people/singularpse/" target="_blank" title="Douban">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  Douban
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/singularpse" target="_blank" title="Github">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  Github
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.linkedin.com/in/singularpse" target="_blank" title="Linkedin">
-                  
-                    <i class="fa fa-fw fa-linkedin-square"></i>
-                  
-                  Linkedin
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/singularpse" target="_blank" title="Weibo">
-                  
-                    <i class="fa fa-fw fa-weibo"></i>
-                  
-                  Weibo
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://twitter.com/Singularpse" target="_blank" title="Twitter">
-                  
-                    <i class="fa fa-fw fa-twitter"></i>
-                  
-                  Twitter
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
       </section>
+
+      
 
       
 
@@ -1675,38 +1604,50 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Yang Peng</span>
+
+  
 </div>
 
 
-<div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
-</div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
-<div class="theme-info">
-  Theme -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
 
 
         
+
+
+
+
+
+
 
         
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
   </div>
 
   
@@ -1729,55 +1670,68 @@
 
 
 
-  
-  <script type="text/javascript" src="lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
 
 
-  <script type="text/javascript" src="js/src/utils.js?v=5.1.0"></script>
 
-  <script type="text/javascript" src="js/src/motion.js?v=5.1.0"></script>
+
 
 
 
   
   
+    <script type="text/javascript" src="lib/jquery/index.js?v=2.1.3"></script>
+  
 
+  
+  
+    <script type="text/javascript" src="lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
 
-  <script type="text/javascript" src="js/src/affix.js?v=5.1.0"></script>
+  
+  
+    <script type="text/javascript" src="lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
 
-  <script type="text/javascript" src="js/src/schemes/pisces.js?v=5.1.0"></script>
+  
+  
+    <script type="text/javascript" src="lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
 
+  
+  
+    <script type="text/javascript" src="lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
 
 
   
 
+
+  <script type="text/javascript" src="js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
   
 
 
-  <script type="text/javascript" src="js/src/bootstrap.js?v=5.1.0"></script>
+  <script type="text/javascript" src="js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
   
-
 
 
   
@@ -1796,8 +1750,25 @@
 
 
 
+
   
+
+
+
+
+
+
+
+
+
+
+
+
   
+
+
+
+
 
   
 
@@ -1806,7 +1777,13 @@
   
 
   
+  
 
+  
+
+  
+
+  
 
 </body>
 </html>
