@@ -221,6 +221,133 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://singularpse.github.io../../2016/10/21/精灵宝可梦历代种族值分布/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yang Peng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="../../Image/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Milestone">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="../../2016/10/21/精灵宝可梦历代种族值分布/" itemprop="url">精灵宝可梦历代种族值分布</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-21T15:53:42+09:00">
+                2016-10-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>昨晚看到新公布的<a href="http://www.nintendo.com.hk/pressrelease/3ds_20161014_sun_moon_release.htm">600准神<strong>杖尾鱗甲龍</strong>以及<strong>低配版的老创銀伴戰獸</strong></a>，总体感觉低配老创还是挺有范儿的，种族值估计不会超600，搞不好直接打个八折，720*0.8=576也还挺有趣。</p>
+<p>既然提到种族值了，就突然对历代新Pokemon的种族值分布有了点兴趣，Wiki虽然有种族值列表，但一图胜千言，正好最近看到一个很漂亮的ggplot2主题，打开RStudio动手：</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">ggplot(<span class="name">data</span>.species.strengths, aes(<span class="name">Species</span>.strengths)) + </div><div class="line">  geom_density(<span class="name">color</span> = <span class="string">"black"</span>, aes(<span class="name">fill</span> = Gen)) +</div><div class="line">  geom_vline(<span class="name">xintercept</span> = <span class="number">530</span>, color = <span class="string">"gray60"</span>, linetype = <span class="number">2</span>) +</div><div class="line">  facet_grid(~Gen) +</div><div class="line">  scale_fill_colorblind() +</div><div class="line">  #theme(<span class="name">text=element_text</span>(<span class="name">family=</span><span class="string">"STKaiti"</span>,size=14)) +</div><div class="line">  theme_bw() +</div><div class="line">  labs(<span class="name">title=</span><span class="string">"Pokemon Species Strengths by Generation"</span>,</div><div class="line">       x = <span class="string">"Species Strengths"</span>,</div><div class="line">       y = <span class="string">"Density"</span>) +</div><div class="line">  theme(</div><div class="line">    <span class="name">strip</span>.background = element_rect(<span class="name">colour</span> = <span class="string">"white"</span>, fill = <span class="string">"white"</span>),</div><div class="line">    strip.text.x = element_text(<span class="name">colour</span> = <span class="string">"black"</span>, size = <span class="number">10</span>, face = <span class="string">"bold"</span>, </div><div class="line">                                family = <span class="string">"Trebuchet MS"</span>),</div><div class="line">    panel.margin = unit(<span class="number">0</span>, <span class="string">"lines"</span>),</div><div class="line">    panel.border = element_rect(<span class="name">colour</span> = <span class="string">"gray90"</span>),</div><div class="line">    axis.text.x = element_text(<span class="name">size</span> = <span class="number">8</span>, family = <span class="string">"Trebuchet MS"</span>),</div><div class="line">    axis.text.y = element_text(<span class="name">size</span> = <span class="number">8</span>, family = <span class="string">"Trebuchet MS"</span>),</div><div class="line">    axis.title = element_text(<span class="name">size</span> = <span class="number">10</span>, family = <span class="string">"Trebuchet MS"</span>),</div><div class="line">    plot.title=element_text(<span class="name">family=</span><span class="string">"TrebuchetMS-Bold"</span>),</div><div class="line">    legend.position = <span class="string">"none"</span>,</div><div class="line">    panel.grid.major = element_blank(), </div><div class="line">    panel.grid.minor = element_blank()</div><div class="line">  )</div></pre></td></tr></table></figure>
+<p><img src="http://www.yangpeng.me/Image/Species_strengths_noMega.png" alt="image"></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="../../2016/10/21/精灵宝可梦历代种族值分布/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://singularpse.github.io../../2016/10/11/游戏王OCG历史上的主流卡组/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -515,7 +642,7 @@
               
                 <a href="../../source/archives">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
